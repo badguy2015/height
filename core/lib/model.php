@@ -38,4 +38,14 @@ Class model extends Medoo
     {
         return $this->get($this->table, '*', ['id'=>$id]);
     }
+
+    public function save($data)
+    {
+        if($data['id']){
+            $rst = $this->update($this->table, $data,['id'=>$data['id']]);
+        }else{
+            $rst = $this->insert($this->table, $data);
+        }
+        return $rst;
+    }
 }

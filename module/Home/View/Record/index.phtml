@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>身高管理</title>
+</head>
+<body>
+    <div>
+        <p>姓名：<?php echo $name; ?></p>
+        <p>最后一次测量身高：125cm</p>
+        <p><a href="/home/record/add?id=1">测量</a></p>
+    </div>
+    <div>
+        <p>身高记录</p>
+        <table>
+            <th>
+                <tr>
+                    <td>测量时间</td>
+                    <td>身高</td>
+                </tr>
+            </th>
+            <?php foreach($recordList as $v){ ?>
+            <tr>
+                <td><?php echo date('Y-m-d H:i:s', $v['create_time']); ?></td>
+                <td>1<?php echo $v['value'] ?>CM</td>
+            </tr>
+            <?php } ?>
+        </table>
+        <p>身高预测</p>
+            <table>
+                <tr>
+                    <td>增高速度</td>
+                    <td>1CM/月，10CM/年</td>
+                </tr>
+                <tr>
+                    <td>一个月后</td>
+                    <td>125CM</td>
+                </tr>
+                <tr>
+                    <td>一年后</td>
+                    <td>125CM</td>
+                </tr>
+                <tr>
+                    <td>六年级</td>
+                    <td>125CM</td>
+                </tr>
+                <tr>
+                    <td>初三</td>
+                    <td>125CM</td>
+                </tr>
+                <tr>
+                    <td>16岁</td>
+                    <td>125CM</td>
+                </tr>
+            </table>
+    </div>
+</body>
+</html>
