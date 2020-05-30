@@ -1,0 +1,16 @@
+{
+  "name" : "badguy2015/apple-framework",
+  "description" : "",
+  "type" : "Framework",
+  "keywords" : [
+    "php_framework"
+  ],
+  "require" : {
+    "php":">=7.1.0",
+    "filp/whoops":"~2.5",
+    "symfony/var-dumper":"~4.3",
+    "catfan/medoo":"*",
+    "zendframework/zend-form": "^2.14",
+    "zendframework/zend-view": "^2.11"
+  }
+}
